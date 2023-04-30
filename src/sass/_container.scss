@@ -1,0 +1,17 @@
+.container {
+  // background-color: $color-light;
+  margin: 0 auto;
+  width: 100%;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}

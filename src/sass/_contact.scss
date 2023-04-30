@@ -1,0 +1,122 @@
+.contact {
+  color: $color-dark;
+  background-color: $color-light;
+
+  @media screen and (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: auto 400px;
+  }
+  @media screen and (min-width: $desktop) {
+    grid-template-columns: auto 690px;
+  }
+}
+
+.contact__picture {
+  display: flex;
+  & img {
+    height: 220px;
+    object-fit: cover;
+
+    @media screen and (min-width: $tablet) {
+      height: auto;
+    }
+  }
+}
+
+.contact__form {
+  padding-top: 51px;
+  padding-bottom: 25px;
+  @include lr-padding($padding-side-mobile);
+
+  background-color: $color-paper;
+
+  & button {
+    @include lr-padding(56px);
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: $padding-side-tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 56px 28px 77px 20px;
+  }
+}
+
+.contact__title {
+  margin-bottom: 69px;
+
+  font-size: $font-size-title-mobile;
+  font-weight: 400;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+
+    font-size: $font-size-title;
+  }
+}
+
+.form__input-box {
+  position: relative;
+  margin-bottom: 24px;
+
+  &--email {
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.form__text-input {
+  width: 100%;
+  padding: 16px 8px;
+
+  border: none;
+  border-radius: 5px;
+}
+
+.form__label {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  color: #808080;
+  transition: top 0.2s ease-in-out, color 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+// .form__text-input:invalid::after {
+//   content: url('../images/form/warning.svg') 'This is a required field';
+//   display: block;
+//   color: red;
+//   font-size: 16px;
+//   margin-top: 5px;
+// }
+
+.form__text-input::placeholder {
+  opacity: 0;
+}
+
+.form__text-input:focus + .form__label,
+.form__text-input:not(:placeholder-shown) + .form__label {
+  top: -25%;
+  color: $color-dark;
+}
+
+.error-message {
+  position: absolute;
+  left: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  color: #eb5757;
+
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  &.active {
+    opacity: 1;
+  }
+}

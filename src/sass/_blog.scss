@@ -1,0 +1,60 @@
+.blog {
+  background-color: $color-additional;
+
+  & button {
+    @include section-button($color-additional);
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 400px auto;
+  }
+  @media screen and (min-width: $desktop) {
+    grid-template-columns: 690px auto;
+  }
+}
+
+.blog__picture {
+  order: 2;
+  display: flex;
+  & img {
+    height: 247px;
+    object-fit: cover;
+    @media screen and (min-width: $tablet) {
+      height: auto;
+    }
+  }
+}
+
+.blog__article {
+  padding-top: 48px;
+  padding-bottom: 58px;
+  @include lr-padding($padding-side-mobile);
+
+  @media screen and (min-width: $tablet) {
+    order: 1;
+    padding: 59px 32px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 80px 28px;
+  }
+}
+
+.blog__subtitle {
+  margin-bottom: 16px;
+}
+
+.blog__title {
+  margin-bottom: 24px;
+
+  font-size: $font-size-title-mobile;
+  font-weight: 400;
+
+  @media screen and (min-width: $tablet) {
+    font-size: $font-size-title;
+  }
+}
+
+.blog__content {
+  margin-bottom: 24px;
+}

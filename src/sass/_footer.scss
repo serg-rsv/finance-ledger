@@ -1,0 +1,29 @@
+.footer {
+  background-color: $color-dark;
+  padding: 20px;
+  text-align: center;
+}
+
+.socials-links--footer {
+  display: inline-flex;
+  gap: 25px;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 10px;
+  }
+}
+
+.socials-links__link--footer {
+  & use {
+    transition: 0.2s ease-in-out fill;
+    fill: $color-light;
+  }
+
+  &:hover,
+  &:focus {
+    & use {
+      fill: $color-accent;
+    }
+  }
+}

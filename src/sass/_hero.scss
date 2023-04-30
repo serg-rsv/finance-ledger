@@ -1,0 +1,62 @@
+.hero {
+  padding-top: 160px;
+  @include lr-padding($padding-side-mobile);
+  padding-bottom: 104px;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../images/home/showcase.jpg');
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('../images/home/showcase@2x.jpg');
+  }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 378px;
+    padding-bottom: 378px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 272px;
+    padding-bottom: 270px;
+  }
+
+  & button {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.hero__title {
+  margin-bottom: 16px;
+  padding: 0 20px;
+
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 55px;
+  }
+}
+
+.hero__subtitle {
+  margin-bottom: 24px;
+
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 40px;
+  }
+}
