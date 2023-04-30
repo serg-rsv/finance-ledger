@@ -1,3 +1,5 @@
+import { showModal } from './showModal';
+
 const form = document.querySelector('[data-form]');
 const emailEl = form.elements.email;
 const errorEl = form.querySelector('[data-error]');
@@ -27,9 +29,10 @@ async function validationForm(e) {
     if (!response.ok) {
       throw Error();
     }
+    showModal('Thank you!', 'Your form submission has been received.');
     form.reset();
   } catch (error) {
-    console.log('Something went wrong');
+    showModal('Oh no!', 'Something went wrong.');
   }
 }
 

@@ -10,6 +10,9 @@ body {
   font-size: $font-size-main-mobile;
   line-height: 1.36;
 
+  width: 100vw;
+  overflow-x: hidden;
+
   @media screen and (min-width: $tablet) {
     font-size: $font-size-main;
   }
