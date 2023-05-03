@@ -4,12 +4,22 @@
     <source
       srcset="images/home/contact.webp 1x, images/home/contact@2x.webp 2x"
       type="image/webp"
+      sizes="(max-width: 320px) 320px,
+           (max-width: 768px) 368px,
+           (max-width: 1360px) 670px"
     />
     <source
       srcset="images/home/contact.jpg 1x, images/home/contact@2x.jpg 2x"
       type="image/jpeg"
+      sizes="(max-width: 320px) 320px,
+           (max-width: 768px) 368px,
+           (max-width: 1360px) 670px"
     />
-    <img src="images/home/contact.jpg" alt="a man is playing kahoot" />
+    <img
+      loading="lazy"
+      src="images/home/contact.jpg"
+      alt="a man is playing kahoot"
+    />
   </picture>
   <form
     data-form
@@ -18,7 +28,7 @@
     method="POST"
     data-netlify="true"
   >
-    <h2 class="contact__title">Request Callback</h2>
+    <h3 class="contact__title">Request Callback</h3>
     <div class="form__input-box">
       <input
         data-input="name"
@@ -50,7 +60,6 @@
     <button
       class="button button--filled"
       type="submit"
-      aria-label="send request"
     >
       Send
     </button>

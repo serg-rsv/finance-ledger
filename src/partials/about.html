@@ -4,23 +4,29 @@
     <source
       srcset="images/home/people.webp 1x, images/home/people@2x.webp 2x"
       type="image/webp"
+      sizes="(max-width: 320px) 320px,
+           (max-width: 768px) 368px,
+           (max-width: 1360px) 670px"
     />
     <source
       srcset="images/home/people.jpg 1x, images/home/people@2x.jpg 2x"
       type="image/jpeg"
+      sizes="(max-width: 320px) 320px,
+           (max-width: 768px) 368px,
+           (max-width: 1360px) 670px"
     />
-    <img src="images/home/people.jpg" alt="2 men and 4 women" />
+    <img loading="lazy" src="images/home/people.jpg" alt="2 men and 4 women" />
   </picture>
   <article class="about__article">
     <p class="about__subtitle">What you are looking for</p>
-    <h2 class="about__title">We provide bespoke solutions</h2>
+    <h3 class="about__title">We provide bespoke solutions</h3>
     <p class="about__content">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum
       dignissimos quae laudantium asperiores nam aliquid impedit harum illum
       dolore explicabo ab dolores itaque rerum temporibus doloribus iste maiores
       deleniti?
     </p>
-    <button type="button" class="button" aria-label="read more about us">
+    <button type="button" class="button">
       Read more
     </button>
   </article>

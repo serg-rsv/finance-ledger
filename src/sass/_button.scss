@@ -10,11 +10,11 @@
 
   font-size: inherit;
 
-  transition: 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
 
   &:hover,
   &:focus {
-    opacity: 0.9;
+    background-color: rgb(40, 167, 69, 0.9);
   }
 }
 
